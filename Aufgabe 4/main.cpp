@@ -1,15 +1,19 @@
-//
-//  main.cpp
-//  Aufgabe 4
-//
-//  Created by Milan Kostic on 13.12.17.
-//  Copyright © 2017 Milan Kostic. All rights reserved.
-//
+#include "String.h"
 
-#include <iostream>
+ostream& operator<< (ostream &out, String &s) {
+    for(int i=0; i<s.size; i++) {
+        out << s.str[i];
+    }
+    
+    return out;
+}
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+
+int main() {
+    String s;
+    String s2('H');
+    
+    cout << s << endl;
+    cout << s2 << endl;
+    
 }
