@@ -66,9 +66,12 @@ String& String::operator+=(String& s) {
         collection[counterOne + counterTwo] = s.str[counterTwo];
     }
     collection[newSize] = '\0';
-    String returnString = new String(collection);
+    String returnString;
+    returnString.str = collection;
+    returnString.size = newSize;
     delete[] collection;
     return returnString;
+    // FIXME: Potential deleted Item, before possible use of it.
 }
 
 //MARK: - Misc -
