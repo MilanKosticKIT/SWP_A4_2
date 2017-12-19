@@ -3,6 +3,7 @@ using namespace std;
 
 #include "String.h"
 
+//MARK: - Constructors -
 
 String::String() {
     size = 0;
@@ -19,23 +20,35 @@ String::String(char c) {
 }
 
 String::String(const char *s) {
-    // TODO
+    int counter;
+    for(counter = 0; *s != '\0'; counter++){
+        }
+    size = counter;
+    str = new char[size + 1];
+    for(counter = 0; *s != '\0'; counter++){
+        str[counter] = s[counter];
+    }
+    str[counter] = s[counter];
 }
 
 String::String(const String& s) {
-    // TODO
+    // TODO: Create a Constructor with a String parameter
 }
 
-String::~String() { delete[] str; }
+//MARK: - Operators -
 
 char& String::operator[](int index) {
-    // TODO
+    // TODO: Overload the operator []
 }
 
 String& String::operator=(String& s) {
-    // TODO
+    // TODO: Overload the operator =
 }
 
 String& String::operator+=(String& s) {
-    // TODO
+    // TODO: Overload the operator +=
 }
+
+//MARK: - Misc -
+
+String::~String() { delete[] str; }
