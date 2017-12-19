@@ -10,10 +10,18 @@ ostream& operator<< (ostream &out, String &s) {
 
 
 int main() {
+    /*
     String s;
     String s2('H');
     
     cout << s << endl;
+    cout << s2 << endl;*/
+    
+    String s1;
+    String s2("Hello");
+    String s3(s2);
+    s1 += s2; s2 = s3;
     cout << s2 << endl;
+    cout << s2[ 2 ] << endl;
     
 }

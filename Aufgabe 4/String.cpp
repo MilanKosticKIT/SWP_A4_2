@@ -51,6 +51,7 @@ char& String::operator[](int index) {
 String& String::operator=(String& s) {
     // TODO: Overload the operator =
     
+    return s;
 }
 
 String& String::operator+=(String& s) {
