@@ -40,7 +40,12 @@ String::String(const String& s) {
 //MARK: - Operators -
 
 char& String::operator[](int index) {
-    // TODO: Overload the operator []
+    // FIXME: Is that right? I'm not sure of the use of pointers anymore.
+    char* searchPointer = str;
+    for(int counter = 0; counter < index; counter++){
+        searchPointer++;
+    }
+    return *searchPointer;
 }
 
 String& String::operator=(String& s) {
