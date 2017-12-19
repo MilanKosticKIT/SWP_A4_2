@@ -32,7 +32,7 @@ String::String(const char *s) {
 }
 
 String::String(const String& s) {
-    // FIXME: This means copying the value, because of call by value?
+    // FIXME: This means copying the value, because of call by value, doesn't it?
     size = s.size;
     str = s.str;
 }
