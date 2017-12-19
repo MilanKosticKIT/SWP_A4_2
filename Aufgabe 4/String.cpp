@@ -50,10 +50,25 @@ char& String::operator[](int index) {
 
 String& String::operator=(String& s) {
     // TODO: Overload the operator =
+    
 }
 
 String& String::operator+=(String& s) {
     // TODO: Overload the operator +=
+    int newSize = String::size + s.size + 1;
+    char* collection = new char[newSize];
+    int counterOne;
+    for (counterOne = 0; counterOne < String::size; counterOne++) {
+        collection[counterOne] = String::str[counterOne];
+    }
+    int counterTwo;
+    for (counterTwo = 0; counterTwo < s.size; counterTwo++) {
+        collection[counterOne + counterTwo] = s.str[counterTwo];
+    }
+    collection[newSize] = '\0';
+    String returnString = new String(collection);
+    delete collection;
+    return returnString;
 }
 
 //MARK: - Misc -
