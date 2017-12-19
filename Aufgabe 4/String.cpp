@@ -67,7 +67,7 @@ String& String::operator+=(String& s) {
     }
     collection[newSize] = '\0';
     String returnString = new String(collection);
-    delete collection;
+    delete[] collection;
     return returnString;
 }
 
