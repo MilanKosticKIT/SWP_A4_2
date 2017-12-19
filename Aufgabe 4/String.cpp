@@ -32,7 +32,9 @@ String::String(const char *s) {
 }
 
 String::String(const String& s) {
-    // TODO: Create a Constructor with a String parameter
+    // FIXME: This means copying the value, because of call by value?
+    size = s.size;
+    str = s.str;
 }
 
 //MARK: - Operators -
